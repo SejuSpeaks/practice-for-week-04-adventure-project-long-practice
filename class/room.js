@@ -1,3 +1,5 @@
+let item = require('./item');
+
 class Room {
 
     constructor(name, description) {
@@ -45,8 +47,10 @@ class Room {
 
     getItemByName(name) {
         // Retrieves an item from a room by item name
+        for (let item of this.items) {
+            if (item.name === name) return item;
+        }
 
-        // Your code here
     }
 
 }
